@@ -114,18 +114,6 @@ py .\tools\line_wxsqlite3_recover.py --key "0123456789abcdef0123456789abcdef" --
 - LINEが未ログイン、ログアウト済み、または対象DBのキーがメモリにない状態では復元できない場合があります。
 - 実行中のLINEからDB/WALをコピーするため、WALが途中で不整合になることがあります。その場合、スクリプトはSQLiteの `PRAGMA quick_check` が通る最新のWAL適用位置を自動で採用します。
 
-## GitHub公開時の注意
-
-以下は公開しないでください。
-
-- `line_recovery_output/`
-- 復号済み `.sqlite`
-- CSV出力
-- LINEの `.edb`, `.edb-wal`, `.edb-shm`
-- 個人のPDF、ログ、画像、添付ファイル
-- `.codex_deps/`, `.codex_research/`
-
-`.gitignore` に基本的な除外設定を入れていますが、公開前に必ず `git status` を確認してください。
 
 ## ライセンス
 
